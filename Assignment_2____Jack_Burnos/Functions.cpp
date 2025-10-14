@@ -206,3 +206,11 @@ size_t LinkedList::find(const int& x) {
 	return numItems;
 
 }
+
+
+// stack function implmentations
+Stack::Stack() {
+	data = new int[initialCap];
+	currentCap = initialCap;
+	numItems = 0;
+}

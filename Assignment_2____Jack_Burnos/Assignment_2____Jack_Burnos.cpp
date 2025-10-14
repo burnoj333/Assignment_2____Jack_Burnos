@@ -37,7 +37,7 @@ int main()
     list.printall();
     cout << endl;
 
-    //inserting 2 new values
+    //inserting 3 new values
     cout << "Inserting 3 new values. 65 at index 3, 99 at index 0, and 34 at index 13:" << endl << endl;
     cout << "New list: ";
     list.insert(3, 65);
@@ -45,7 +45,7 @@ int main()
     list.insert(0, 99);
     list.printall();
 
-    //removing 2 indices test
+    //removing 3 indices test
     cout << "Removing indices 4, 0, and 16:" << endl << endl;
     list.remove(4);
     list.remove(0);
