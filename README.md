@@ -45,7 +45,18 @@ sequentially was called and did not print anything besides the error message.
 
 <img width="604" height="471" alt="Screenshot (57)" src="https://github.com/user-attachments/assets/a4ebba5e-7e16-43c3-aee5-e41a4ef3f16f" />
 
-For the stack portion of the program, a class was added to the same header and cpp files defining this stack. 
+For the stack portion of the program, a class was added to the same header and cpp files. I based it off of the array class we wrote for assignment 1 but only included pop, top, add, getSize, and isEmpty. The array was also able to rezise dynamically. 
+
+I started by creating a stack object and checking if it was empty. Sicne numItems was initilized as zero, the first test prints a statement saying its empty.
+
+The next test was to load values onto the stack. I used the stackAdd function in main and no input is taken from the user. The values are disaplyed in the order they were added giving an idea of the stacks contents. The stack was also printed from last(bottom) element to top. 
+
+I then popped an element from the top, showed the value that was removed and displayed the new top.
+
+The average was also found and output. 
+
+<img width="1301" height="813" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/511e8824-7ba4-4896-8044-71a44c176157" />
+
 
 
 
