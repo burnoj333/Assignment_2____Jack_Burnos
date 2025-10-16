@@ -214,3 +214,79 @@ Stack::Stack() {
 	currentCap = initialCap;
 	numItems = 0;
 }
+
+//[] operator definition
+int& Stack::operator[](size_t index) {
+	// index validation 
+	if (index >= numItems) {
+		throw std::out_of_range
+		("that index isnt in the array");
+	}
+	return data[index];
+}
+
+void Stack::resize(int cap) {
+	currentCap = cap;  //resizing cap
+
+	int* newA = new int[currentCap];   //new array of double size
+	for (int i = 0; i < numItems; i++) {    //copying data over O(n)
+		newA[i] = data[i];
+	}
+	//clearing space
+	delete[] data;
+	data = newA;
+
+}
+
+void Stack::stackAdd(int value) {
+	if (numItems == currentCap) {
+		resize(2 * currentCap);
+	}
+	data[numItems] = value;
+	numItems++;
+}
+
+int Stack::stackPop() {
+	if (numItems == currentCap) {
+		resize(2 * currentCap);
+	}
+	int temp = data[numItems - 1];
+	numItems--;
+	return temp;
+
+}
+
+int Stack::stackTop() {
+	int temp = data[numItems - 1];
+	return temp;
+
+}
+
+bool Stack::isEmpty() {
+	if (numItems > 0) {
+		cout << endl << "Stack is not empty." << endl << endl;
+		return false;
+	}
+	else {
+		cout << endl << "Stack is empty." << endl << endl;
+		return true;
+
+	}
+}
+
+double Stack::average() {
+	int total=0;
+	int count=0;
+	if (numItems != 0) {
+		
+		for (int i = 0; i < numItems; i++) {
+			total += data[i];
+			count += 1;
+		}
+	}
+	else {
+		cout << endl << "Stack is empty; cannot find average" << endl << endl;
+		return -1;
+	}
+	return total / count;
+}

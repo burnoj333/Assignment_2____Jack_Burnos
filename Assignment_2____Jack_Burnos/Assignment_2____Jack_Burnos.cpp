@@ -67,4 +67,39 @@ int main()
     cout << "New list: ";
     list.printall();
 
+
+    //stack testing
+
+    //creating stack object
+    Stack stack;
+    cout << endl << "~~~~~~~~~~~~~~~STACK~~~~~~~~~~~~~~" << endl << endl;
+
+    //checking empty status
+    cout << endl << "Checking if new stack is empty: " << endl;
+    stack.isEmpty();
+
+    //loading stack
+    cout << endl << "Adding values 33, 55, 21, 68, 90, 10, and 88 to stack in that order" << endl;
+    stack.stackAdd(33);
+    stack.stackAdd(55);
+    stack.stackAdd(21);
+    stack.stackAdd(68);
+    stack.stackAdd(90);
+    stack.stackAdd(10);
+    stack.stackAdd(88);
+
+    //removing 88 from stack
+    cout << "Current stack from last to first: ";
+    stack.print();
+    cout << endl << endl;
+    cout << "Removing top element from stack: " << endl;
+    int c = stack.stackPop();
+    cout << "Element '" << c << "' removed. New top is " << stack.stackTop() << endl << endl;
+    cout << endl << "New Stack: ";
+    stack.print();
+
+    //finding average
+    cout << endl << endl << "Finding average of stack: " << endl;
+    cout << "Average is:  " << stack.average() << endl << endl;
+
 }

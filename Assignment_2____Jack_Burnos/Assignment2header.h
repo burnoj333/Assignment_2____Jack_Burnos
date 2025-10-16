@@ -52,8 +52,6 @@ public:
 		cout << endl;
 	}
 
-	
-
 };
 
 class Stack {
@@ -65,10 +63,19 @@ private:
 public:
 	int getSize() { return numItems; }
 	Stack();
+	int& operator[](size_t index);
 	void resize(int cap);
 	void stackAdd(int value);
 	int stackPop();
 	int stackTop();
+	bool isEmpty();
+	double average();
+
+	void print() {
+		for (int i = 0; i < numItems; i++) {
+			cout << data[i] << "   ";
+		}
+	}
 
 };
 
