@@ -38,7 +38,7 @@ public:
 
 	//test function for my own use in display
 	void printall() {
-		//checking for emptiness
+		//checkingg for emptiness
 		if (head == nullptr && numItems == 0) {
 			cout << "List is empty..." << endl;
 			return;

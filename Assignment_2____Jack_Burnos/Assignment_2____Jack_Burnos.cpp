@@ -7,7 +7,7 @@ int main()
 
     //calling functions on linked list
     LinkedList list;
-    //loading list
+    //loading listt
     cout << "List initially loaded with 6 values using push front/back. Sequence should be '43 61 55 23 82 90' " << endl << endl;
     list.pushFront(23);
     list.pushFront(55);
