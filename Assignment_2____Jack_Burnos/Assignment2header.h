@@ -61,7 +61,7 @@ private:
 	size_t numItems;
 	size_t currentCap;
 	static const size_t initialCap = 20;
-	int data[];
+	int* data;
 public:
 	int getSize() { return numItems; }
 	Stack();
